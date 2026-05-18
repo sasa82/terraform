@@ -1,0 +1,10 @@
+hcloud_token        = "your-hetzner-api-token"
+server_name         = "test-server"
+server_image        = "ubuntu-24.04"
+server_type         = "cpx32"
+location            = "nbg1"
+network_id          = 12233453
+private_ip          = "10.0.1.1"
+ssh_public_key_path = "~/.ssh/id_rsa.pub"
+allowed_ssh_cidrs   = ["0.0.0.0/0"]
+environment         = "test"
