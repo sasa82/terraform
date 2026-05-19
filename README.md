@@ -41,12 +41,16 @@ terraform/
 ### Quick Start
 
 ## Hetzner
+```
 cd hetzner/private-network && terraform init && terraform apply
 cd hetzner/server && terraform init && terraform apply
+```
 
 ## AWS
+```
 cd aws/vpc && terraform init && terraform apply
 cd aws/ec2 && terraform init && terraform apply
+```
 
 ### Modules
 
