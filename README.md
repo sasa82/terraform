@@ -4,13 +4,25 @@ Multi-cloud infrastructure management using Terraform.
 Covers server provisioning, networking and virtualization across multiple cloud providers.
 
 ### Structure
-
+```
 terraform/
-├── hetzner/          ## Hetzner Cloud infrastructure
-├── aws/              ## Amazon Web Services infrastructure
-├── azure/            ## Microsoft Azure infrastructure (coming soon)
-└── virtualization/   ## Virtualization scripts (LXC/KVM)
-
+│
+├── hetzner/
+│   ├── private-network/     ## Hetzner private network
+│   └── server/              ## Hetzner server
+│
+├── aws/
+│   ├── vpc/                 ## AWS Virtual Private Cloud
+│   └── ec2/                 ## AWS EC2 instance
+│
+├── azure/                   ## Coming soon
+│   ├── vnet/
+│   └── vm/
+│
+└── virtualization/
+    ├── lxc/                 ## LXC container scripts
+    └── kvm/                 ## KVM scripts (TODO)
+```
 ### Providers
 
 | Provider | Status | Resources |
