@@ -4,7 +4,7 @@ Scripts for managing virtual environments on cloud servers.
 Used primarily for testing Ansible roles on isolated environments.
 
 ### Structure
-
+```
 virtualization/
 ├── lxc/              ## LXC container management
 │   └── scripts/
@@ -14,7 +14,7 @@ virtualization/
     └── scripts/
         ├── create-vm.sh
         └── delete-vm.sh
-
+```
 ### LXC (Linux Containers)
 
 #### Prerequisites
@@ -24,33 +24,45 @@ virtualization/
 #### Usage
 
 ## Create containers
+```
 ./lxc/scripts/create-containers.sh <count> <name> <ubuntu-version>
-
+```
 ## Examples
+```
 ./lxc/scripts/create-containers.sh 3 clickhouse 24.04
 ./lxc/scripts/create-containers.sh 3 kafka 24.04
 ./lxc/scripts/create-containers.sh 2 postgres 24.04
-
+```
 ## Delete containers
+```
 ./lxc/scripts/delete-containers.sh <count> <name>
 ./lxc/scripts/delete-containers.sh 3 clickhouse
+```
 
 #### Workflow
 
 ## 1. Create containers for specific service
+```
 ./lxc/scripts/create-containers.sh 3 clickhouse 24.04
+```
 
 ## 2. Get container IPs
+```
 lxc list
+```
 
 ## 3. Add IPs to Ansible inventory
 ## 4. Run Ansible playbook
 ## 5. Test installation
 ## 6. Destroy containers
+```
 ./lxc/scripts/delete-containers.sh 3 clickhouse
+```
 
 ## 7. Repeat for next service
+```
 ./lxc/scripts/create-containers.sh 3 kafka 24.04
+```
 
 #### Use Cases
 - Testing Ansible roles
